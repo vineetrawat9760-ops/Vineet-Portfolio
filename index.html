@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My E-Portfolio</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f9fafc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2c3e50, #1abc9c);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    header a {
+      color: #fff;
+      background: #16a085;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    header a:hover {
+      background: #1abc9c;
+    }
+
+    nav {
+      background: #34495e;
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #1abc9c;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #2c3e50;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      background: #ecf0f1;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    ul li:hover {
+      background: #dfe6e9;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Vineet's E-Portfolio</h1>
+    <p>B.Tech CSE Student | Aspiring Software Engineer</p>
+    <p><a href="https://www.linkedin.com/in/vineet-rawat-317140340?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn Profile</a></p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#assignments">Assignments</a>
+  </nav>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>Hello! My name is Vineet, and I am currently pursuing a <strong>B.Tech in Computer Science and Engineering</strong>. I am passionate about technology, problem-solving, and building innovative solutions. My academic journey has equipped me with strong foundations in programming, data structures, algorithms, and software development. I am eager to apply my skills to real-world projects and continuously learn new technologies to grow as a professional.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <ul>
+        <li>Programming Languages: C, C++, Java, Python</li>
+        <li>Web Development: HTML</li>
+        <li>Problem Solving & Data Structures</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+      <p><strong>Pathfinder Navigation System</strong> – <a href="https://vineet-portfolio.github.io/pathfinder" target="_blank">View Project</a></p>
+      <p><strong>Pathfinder Navigation System</strong> – <a href="file:///C:/Vineet%20Singh%20Rawat/web.html" target="_blank">View Project</a></p>
+    </div>
+  </section>
+
+  <!-- Assignments for video(<p><strong>Assignment 2:</strong> <a href="https://youtube.com/your-video-link" target="_blank">Watch Video</a></p>)
+ Section -->
+  <section id="assignments">
+    <h2>Assignments</h2>
+    <div class="card">
+      <p><strong>Assignment 1: Profiling Sheet :</strong> <a href="https://drive.google.com/file/d/1HhfAyZ7y1YqfJCuNifizlXqKEt09P4X-/view?usp=drivesdk" target="_blank">View Document</a></p>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Vineet | B.Tech CSE Portfolio</p>
+  </footer>
+
+</body>
+</html>
