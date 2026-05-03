@@ -5,121 +5,185 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My E-Portfolio</title>
   <style>
-    /* Global Styles */
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: #f9fafc;
-      color: #333;
-      line-height: 1.6;
-    }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    header {
-      background: linear-gradient(135deg, #2c3e50, #1abc9c);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #eef2f3, #ffffff);
+    color: #333;
+  }
+
+  /* HEADER */
+  header {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
+
+  header p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+
+  header a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: #00c6ff;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  header a:hover {
+    background: #0072ff;
+    transform: scale(1.05);
+  }
+
+  /* NAVBAR */
+  nav {
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+  }
+
+  nav a {
+    color: white;
+    margin: 0 15px;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+  }
+
+  nav a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #00c6ff;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+  }
+
+  nav a:hover::after {
+    width: 100%;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    color: #222;
+  }
+
+  /* GLASS CARD */
+  .card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+  }
+
+  /* SKILLS LIST */
+  ul li {
+    list-style: none;
+    background: linear-gradient(135deg, #dfe9f3, #ffffff);
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+
+  ul li:hover {
+    transform: translateX(5px);
+  }
+
+  /* PROJECT TITLE */
+  .card strong {
+    font-size: 1.2rem;
+    color: #0072ff;
+  }
+
+  /* LINKS */
+  a {
+    color: #0072ff;
+    font-weight: 500;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #141e30;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* ANIMATION */
+  .card {
+    animation: fadeUp 0.8s ease;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
     }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-    header a {
-      color: #fff;
-      background: #16a085;
-      padding: 8px 15px;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    header a:hover {
-      background: #1abc9c;
+      font-size: 2rem;
     }
 
     nav {
-      background: #34495e;
-      display: flex;
-      justify-content: center;
-      padding: 15px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      flex-direction: column;
     }
+
     nav a {
-      color: white;
-      margin: 0 20px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
+      margin: 10px 0;
     }
-    nav a:hover {
-      color: #1abc9c;
-    }
-
-    section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      color: #2c3e50;
-      font-size: 2rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      margin: 20px 0;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      background: #ecf0f1;
-      margin: 8px 0;
-      padding: 10px;
-      border-radius: 6px;
-      transition: background 0.3s ease;
-    }
-    ul li:hover {
-      background: #dfe6e9;
-    }
-
-    footer {
-      background: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      nav {
-        flex-direction: column;
-      }
-      nav a {
-        margin: 10px 0;
-      }
-    }
+  }
   </style>
 </head>
 <body>
@@ -161,22 +225,24 @@
 
   <!-- Projects Section -->
   <section id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-      <p><strong>Pathfinder Navigation System</strong></p>
-      <p><strong>Expense Tracker</strong></p>
-    </div>
-  </section>
+  <h2>Projects</h2>
 
-  <!-- Assignments for video(<p><strong>Assignment 2:</strong> <a href="https://youtube.com/your-video-link" target="_blank">Watch Video</a></p>)
- Section -->
-  <section id="assignments">
-    <h2>Assignments</h2>
-    <div class="card">
-      <p><strong>Assignment 1: Profiling Sheet :</strong> <a href="https://drive.google.com/file/d/1HhfAyZ7y1YqfJCuNifizlXqKEt09P4X-/view?usp=drivesdk" target="_blank">View Document</a></p>
-      <p><strong>Assignment 2: Self Introduction Video :</strong> <a href="https://www.linkedin.com/posts/vineet-rawat-317140340_activity-7306747121443979265-Zgr8?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAFVzEcMB6jQ39JLcKtlPZBoWivOWSrQdsjk&utm_campaign=copy_link"_blank">Watch Video</a></p>
+  <div class="card">
+    <p><strong>Pathfinder Navigation System</strong></p>
+    <p>
+      Developed a navigation system that finds the shortest path between locations using graph algorithms like Dijkstra’s algorithm. 
+      The project focuses on optimizing route selection and improving efficiency in real-time navigation scenarios.
+    </p>
+  </div>
 
-    </div>
+  <div class="card">
+    <p><strong>Expense Tracker</strong></p>
+    <p>
+      Built a simple expense tracking application to manage daily spending. 
+      Users can add, view, and categorize expenses, helping them analyze their financial habits and maintain a budget.
+    </p>
+  </div>
+
   </section>
 
   <!-- Footer -->
@@ -187,6 +253,3 @@
 </body>
 
 </html>
-
-
-
