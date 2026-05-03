@@ -3,262 +3,245 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My E-Portfolio</title>
+  <title>Vineet's E-Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
   <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #eef2f3, #ffffff);
-    color: #333;
-  }
-
-  /* HEADER */
-  header {
-    background: linear-gradient(135deg, #141e30, #243b55);
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-  }
-
-  header h1 {
-    font-size: 3rem;
-    letter-spacing: 1px;
-  }
-
-  header p {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    opacity: 0.9;
-  }
-
-  header a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    border-radius: 25px;
-    background: #00c6ff;
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-
-  header a:hover {
-    background: #0072ff;
-    transform: scale(1.05);
-  }
-
-  /* NAVBAR */
-  nav {
-    background: rgba(0,0,0,0.8);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-    position: sticky;
-    top: 0;
-  }
-
-  nav a {
-    color: white;
-    margin: 0 15px;
-    font-weight: 500;
-    text-decoration: none;
-    position: relative;
-  }
-
-  nav a::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #00c6ff;
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    transition: 0.3s;
-  }
-
-  nav a:hover::after {
-    width: 100%;
-  }
-
-  /* SECTIONS */
-  section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
-  }
-
-  h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.2rem;
-    color: #222;
-  }
-
-  /* GLASS CARD */
-  .card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    padding: 25px;
-    margin: 20px 0;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    transition: 0.3s;
-  }
-
-  .card:hover {
-    transform: translateY(-8px) scale(1.01);
-    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
-  }
-
-  /* SKILLS LIST */
-  ul li {
-    list-style: none;
-    background: linear-gradient(135deg, #dfe9f3, #ffffff);
-    margin: 10px 0;
-    padding: 12px;
-    border-radius: 8px;
-    transition: 0.3s;
-  }
-
-  ul li:hover {
-    transform: translateX(5px);
-  }
-
-  /* PROJECT TITLE */
-  .card strong {
-    font-size: 1.2rem;
-    color: #0072ff;
-  }
-
-  /* LINKS */
-  a {
-    color: #0072ff;
-    font-weight: 500;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  /* FOOTER */
-  footer {
-    background: #141e30;
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-
-  /* ANIMATION */
-  .card {
-    animation: fadeUp 0.8s ease;
-  }
-
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #eef2f3, #ffffff);
+      color: #333;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
     header h1 {
-      font-size: 2rem;
+      font-size: 3rem;
     }
 
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    header a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      border-radius: 25px;
+      background: #00c6ff;
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    header a:hover {
+      background: #0072ff;
+    }
+
+    /* PROFILE IMAGE */
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 20px;
+      border: 4px solid white;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.05);
+    }
+
+    /* NAV */
     nav {
-      flex-direction: column;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
     }
 
     nav a {
-      margin: 10px 0;
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      position: relative;
     }
-  }
+
+    nav a::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #00c6ff;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* SECTION */
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    /* CARD */
+    .card {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(10px);
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    ul li {
+      list-style: none;
+      background: #ecf0f1;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #141e30;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Vineet's E-Portfolio</h1>
-    <p>B.Tech CSE Student | Aspiring Software Engineer</p>
-    <p><a href="https://www.linkedin.com/in/vineet-rawat-317140340?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn Profile</a></p>
-  </header>
+<header>
+  <h1>Vineet's E-Portfolio</h1>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#assignments">Assignments</a>
-  </nav>
+  <!-- PROFILE IMAGE -->
+  <img src="profile.jpg" alt="Vineet Profile" class="profile-pic">
 
-  <!-- About Me Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="card">
-      <p>Hello! My name is Vineet, and I am currently pursuing a <strong>B.Tech in Computer Science and Engineering</strong>. I am passionate about technology, problem-solving, and building innovative solutions. My academic journey has equipped me with strong foundations in programming, data structures, algorithms, and software development. I am eager to apply my skills to real-world projects and continuously learn new technologies to grow as a professional.</p>
-    </div>
-  </section>
+  <p>B.Tech CSE Student | Aspiring Software Engineer</p>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="card">
-      <ul>
-        <li>Programming Languages: C, C++, Java, Python</li>
-        <li>Web Development: HTML</li>
-        <li>Problem Solving & Data Structures</li>
-      </ul>
-    </div>
-  </section>
+  <a href="https://www.linkedin.com/in/vineet-rawat-317140340" target="_blank">
+    LinkedIn Profile
+  </a>
+</header>
 
-  <!-- Projects Section -->
-  <section id="projects">
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#assignments">Assignments</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>Hello! I'm Vineet, a B.Tech CSE student passionate about software development, problem-solving, and learning new technologies.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="card">
+    <ul>
+      <li>C, C++, Java, Python</li>
+      <li>HTML (Web Development)</li>
+      <li>Data Structures & Problem Solving</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
   <h2>Projects</h2>
 
   <div class="card">
     <p><strong>Pathfinder Navigation System</strong></p>
     <p>
-      Developed a navigation system that finds the shortest path between locations using graph algorithms like Dijkstra’s algorithm. 
-      The project focuses on optimizing route selection and improving efficiency in real-time navigation scenarios.
+      Developed a system to find the shortest path using Dijkstra’s algorithm, improving route efficiency in navigation scenarios.
     </p>
   </div>
 
   <div class="card">
     <p><strong>Expense Tracker</strong></p>
     <p>
-      Built a simple expense tracking application to manage daily spending. 
-      Users can add, view, and categorize expenses, helping them analyze their financial habits and maintain a budget.
+      Created an application to track daily expenses, categorize spending, and help users manage their budget effectively.
     </p>
   </div>
 
-  </section>
-   <section id="assignments">
-    <h2>Assignments</h2>
-    <div class="card">
-      <p><strong>PESE Written Assignment 1: Profiling Sheet :</strong> <a href="https://drive.google.com/file/d/1HhfAyZ7y1YqfJCuNifizlXqKEt09P4X-/view?usp=drivesdk" target="_blank">View Document</a></p>
-      <p><strong>PESE Written Assignment 2:  :</strong> <a href="https://drive.google.com/file/d/1R_7Z9KVT3JOjDZcatiij2RItPoFu5KFn/view?usp=drivesdk">View Document</a></p>
-      <p><strong>Assignment 2: Self Introduction Video :</strong> <a href="https://www.linkedin.com/posts/vineet-rawat-317140340_activity-7306747121443979265-Zgr8?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAFVzEcMB6jQ39JLcKtlPZBoWivOWSrQdsjk&utm_campaign=copy_link"_blank">Watch Video</a></p>
+</section>
 
-    </div>
-  </section>
- 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Vineet | B.Tech CSE Portfolio</p>
-  </footer>
+<section id="assignments">
+  <h2>Assignments</h2>
+  <div class="card">
+    <p><strong>Assignment 1:</strong> 
+      <a href="https://drive.google.com/file/d/1HhfAyZ7y1YqfJCuNifizlXqKEt09P4X-/view" target="_blank">View</a>
+    </p>
+
+    <p><strong>Assignment 2:</strong> 
+      <a href="https://drive.google.com/file/d/1R_7Z9KVT3JOjDZcatiij2RItPoFu5KFn/view" target="_blank">View</a>
+    </p>
+
+    <p><strong>Intro Video:</strong> 
+      <a href="https://www.linkedin.com/posts/vineet-rawat-317140340_activity-7306747121443979265" target="_blank">Watch</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Vineet | Portfolio</p>
+</footer>
 
 </body>
-
 </html>
